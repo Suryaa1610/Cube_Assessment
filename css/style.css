@@ -1,4 +1,3 @@
-/* reset & base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,14 +9,12 @@ body {
   
 }
 
-/* background wrapper for header + hero */
 .page-bg {
   background: url('/assets/Home.png') no-repeat center bottom;
   background-size: cover;
   min-height: 100vh;
 }
 
-/* container as before */
 .container {
   max-width: 1200px;
   margin: auto;
@@ -27,7 +24,6 @@ body {
   justify-content: space-between;
 }
 
-/* header exactly as before */
 .header {
   padding: 20px 0;
   border-bottom: 1px solid #ddd;
@@ -82,14 +78,12 @@ body {
   font-weight: 500;
 }
 
-/* hamburger */
 .hamburger {
   display: none;
   font-size: 24px;
   cursor: pointer;
 }
 
-/* hero WITHOUT background now, inside .page-bg */
 .hero {
   color: #1d3c2f;
   padding: 80px 20px;
@@ -187,27 +181,27 @@ body {
 
  .content {
   display: flex;
-  height: 100vh; /* Use viewport height to fill the screen */
-  align-items: center; /* Center items vertically */
+  height: 100vh;
+  align-items: center; 
 }
 
 .image-container {
-  flex: 1; /* Take up half the space */
+  flex: 1; 
   display: flex;
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
+  justify-content: center; 
+  align-items: center; 
 }
 
 .image-container img {
-  max-width: 80%; /* Adjust the image size to be medium */
-  height: auto; /* Maintain the aspect ratio */
+  max-width: 80%; 
+  height: auto; 
 }
 
 .content-container {
-  flex: 1; /* Take up half the space */
+  flex: 1; 
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
+  justify-content: center; 
+  align-items: center; 
 }
 
 .content-box {
@@ -241,20 +235,10 @@ body {
   display: inline-block;
 }
 
-/* styles.css */
-.body-product {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
 .product-container {
   display: flex;
   width: 90%;
+  margin-left: 80px;
   max-width: 1200px;
   overflow: hidden;
 }
@@ -265,13 +249,33 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 90px;
 }
 
 .main-image {
   width: 100%;
-  max-width: 80%; 
+  max-width: 1200px; 
   height: auto; 
   margin-bottom: 10px;
+}
+
+.nav-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  position: absolute;
+}
+
+.backward-button {
+  left: 10px;
+}
+
+.forward-button {
+  right: 10px;
 }
 
 .thumbnail-images {
@@ -286,37 +290,72 @@ body {
   border-radius: 5px;
 }
 
-.rating {
-  color: #ffc107;
-}
-
 .description-text {
   color: black;
   margin-bottom: 20px;
 }
-
-.subscription-options {
-  background-color: #f3e5f5;
-  border-radius: 8px;
-  padding: 15px;
+.rating {
+  color: green;
 }
 
-.subscription-header {
+.description-text {
+  color: #666;
+}
+
+.subscription-options {
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.subscription-options h3 {
+  text-align: center;
+  background-color: #2e7d32;
+  width: 600px;
+  color: white;
+  padding: 15px; 
+  margin: 0; 
+  display: inline-block; 
+  border-radius: 8px; 
+}
+
+.subscription-option {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.subscription-label {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+
+.price-container {
+  display: flex;
+  gap: 10px; 
   align-items: center;
 }
 
 .price {
   font-weight: bold;
-  color: #2e7d32;
-  font-size: 20px;
+  color: #2e7d32; 
 }
 
 .discount {
   text-decoration: line-through;
   color: #888;
-  font-size: 16px;
+}
+
+.subscription-view {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
 }
 
 .fragrance-options {
@@ -329,6 +368,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .fragrance-options input[type="radio"] {
@@ -336,15 +376,12 @@ body {
 }
 
 .fragrance-options img {
-  width: 60px;
+  width: 150px;
   height: auto;
   border: 2px solid transparent;
   border-radius: 5px;
-  cursor: pointer;
+  margin-bottom: 5px;
 }
-
-/* .fragrance-options input[type="radio"]:checked + img {
-} */
 
 .whats-included {
   margin: 20px 0;
@@ -357,6 +394,14 @@ body {
 
 .whats-included li {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.whats-included li img {
+  width: 16px; 
+  height: 16px; 
+  margin-right: 8px; 
 }
 
 .included-images {
@@ -366,16 +411,8 @@ body {
 }
 
 .included-images img {
-  width: 150px;
-  height: 200px;
-  border-radius: 5px;
-}
-
-.total-price {
-  font-weight: bold;
-  color: #2e7d32;
-  font-size: 20px;
-  text-align: center;
+  width: 170px;
+  height: auto;
 }
 
 .add-to-cart {
@@ -387,8 +424,8 @@ body {
   cursor: pointer;
   font-weight: bold;
   width: 100%;
+  margin-top: 20px;
 }
-
 
 
 .product-page {
@@ -413,7 +450,7 @@ body {
 }
 
 .product-image img {
-  max-width: 300px;
+  max-width: 500px;
   height: auto;
 }
 
@@ -443,10 +480,10 @@ body {
 
 .option {
   display: flex;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(205, 198, 221, 0.1);
   border-radius: 8px;
   padding: 15px;
+  flex-direction: column;
 }
 
 .option-content {
@@ -454,6 +491,7 @@ body {
 }
 
 .option h3 {
+    margin-bottom: 20px;
   margin-top: 0;
 }
 
@@ -462,35 +500,37 @@ body {
 }
 
 .icon img {
+  margin-bottom: 20px;
   width: 40px;
   height: 40px;
 }
 
-.try-button {
-  background-color: #000;
-  color: white;
+.product-button {
+  background-color: white;
+  color: black;
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
   margin-top: 20px;
-  width: 100%;
+  width: 250px;
 }
+
 .subscription-banner {
   display: flex;
-  background-color: #d8c4b6; /* Light brown background */
+  background-color: #d8c4b6; 
   color: #333;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  width: 90%;
+  max-width: 1100px;
+  width: 100%;
   margin: 20px auto;
   overflow: hidden;
   align-items: center;
-    background: url('/assets/Subscribe_bg.png') center/cover no-repeat;
-height: 400px;
-width: 1000px;
+  background: url('/assets/Subscribe_bg.png') center/cover no-repeat;
+  height: 400px;
+  width: 1000px;
   padding: 20px;
 }
 
@@ -498,11 +538,17 @@ width: 1000px;
   flex: 1;
   padding: 20px;
 }
+.subscription-text p {
+  flex: 1;
+  color: white;
+  margin-bottom: 60px;
+
+}
 
 .subscription-text h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #e8ebe9; /* Green color for the heading */
+  color: #e8ebe9; 
 }
 
 .subscription-benefits {
@@ -520,14 +566,15 @@ width: 1000px;
   font-size: 14px;
 }
 
-.subscribe-button {
-  background-color: #2e7d32; /* Green color for the button */
+.subscribe-button1 {
+  background-color: #3b7a3e; 
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
+  margin-top: 20px;
 }
 
 .perfume-image {
@@ -546,15 +593,18 @@ width: 1000px;
   display: flex;
   background-color: white;
   border-radius: 10px;
-  max-width: 1000px;
-  width: 90%;
+  max-width: 1100px;
+  width: 100%;
   margin: 20px auto;
   overflow: hidden;
+  margin-top: 50px;
 }
 
 .collection-list {
   flex: 1;
   padding: 20px;
+  margin-top: 80px;
+
 }
 
 .collection-list h2 {
@@ -568,17 +618,19 @@ width: 1000px;
   align-items: center;
   padding: 15px;
   cursor: pointer;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
 }
-
-.collection-item:last-child {
-  border-bottom: none;
-}
-
+ .collection-item p{ 
+  margin-top: 20px;
+ }
+ 
 .expand-icon {
   font-size: 20px;
 }
 
-.product-image {
+.product-image1 {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -586,19 +638,21 @@ width: 1000px;
   padding: 20px;
 }
 
-.product-image img {
+.product-image1 img {
   max-width: 500px;
   height: 500px;
+  margin-left: 100px;
   border-radius: 10px;
 }
 
 .statistics-banner {
   display: flex;
   justify-content: space-around;
-  background-color: #2e7d32; /* Dark green background */
+  background-color: #2e7d32;
   color: white;
   padding: 20px;
   text-align: center;
+  
 }
 
 .statistic {
@@ -629,9 +683,13 @@ width: 1000px;
       background-color: white;
     }
 
+    .comparison-table tr {
+  border-bottom: 1px solid #ddd;
+}
+
     .comparison-table th, .comparison-table td {
       padding: 12px;
-      text-align: center;
+      text-align: left;
     }
 
     .comparison-table th {
@@ -666,11 +724,12 @@ width: 1000px;
       background-color: #2e7d32;
       color: white;
       border: none;
+      width: 150px;
       padding: 10px 20px;
       border-radius: 20px;
       cursor: pointer;
       font-weight: bold;
-      margin: 20px auto;
+      margin: 80px auto;
       display: block;
     }
 
@@ -685,8 +744,8 @@ width: 1000px;
 
     .founders-section {
   background-color: white;
-  max-width: 800px;
-  width: 1000px;
+  max-width: 1200px;
+  width: 1400px;
   margin: 20px auto;
   overflow: hidden;
 }
@@ -704,18 +763,22 @@ width: 1000px;
 }
 .text-container {
   padding: 20px;
-  text-align: left;
+  
 }
 
 .text-container h2 {
   color: #2e7d32;
   font-size: 24px;
-  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 90px;
+  margin-top: 20px;
 }
 
 .text-container p {
   font-size: 16px;
   color: #666;
+  margin-left: 600px;
+  text-align: left;
   margin-bottom: 20px;
 }
 
@@ -723,6 +786,8 @@ width: 1000px;
   background-color: #2e7d32;
   color: white;
   border: none;
+  margin-left: 90px;
+  margin-bottom: 30px;
   padding: 10px 20px;
   border-radius: 20px;
   cursor: pointer;
@@ -730,10 +795,10 @@ width: 1000px;
 }
 
 .reviews-section {
-  max-width: 1200px;
+  max-width: 1400px;
   background-color:  #F0FDF4;
   margin: 0 auto;
-  padding: 20px;
+  padding: 50px;
 }
 
 .reviews-header {
@@ -750,6 +815,11 @@ width: 1000px;
   font-size: 16px;
   color: #666;
 }
+.reviews-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
 
 .reviews-container {
   display: flex;
@@ -761,10 +831,46 @@ width: 1000px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 10px;
+  padding: 30px;
+  margin: 20px;
   width: 30%;
-  min-width: 250px;
+  min-width: 220px;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-80%);
+  background: #333;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.scroll-btn:hover {
+  opacity: 1;
+}
+
+.left-btn {
+  left: -20px;
+}
+
+.right-btn {
+  right: -20px;
+}
+
+.reviews-container::-webkit-scrollbar {
+  display: none;
+}
+
+.reviews-container {
+  scrollbar-width: none;
 }
 
 .rating {
@@ -810,7 +916,7 @@ width: 1000px;
   display: flex;
   background-color: white;
   border-radius: 10px;
-  max-width: 800px;
+  max-width: 1200px;
   width: 100%;
   margin: 20px auto;
   padding: 20px;
@@ -847,6 +953,24 @@ width: 1000px;
   flex: 2;
   padding: 20px;
 }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px; 
+}
+
+
+.expand-icon {
+  transition: transform 0.3s;
+}
+
+.faq-item.active .expand-icon {
+  transform: rotate(45deg);
+}
 
 .faq-item {
   border-bottom: 1px solid #ddd;
@@ -864,15 +988,11 @@ width: 1000px;
   font-size: 16px;
 }
 
-.expand-icon {
-  font-size: 20px;
-}
-
 .see-all-link {
   display: block;
-  text-align: right;
+  text-align: center;
   margin-top: 20px;
-  color: #2e7d32;
+  color: black;
   text-decoration: none;
 }
 
@@ -882,7 +1002,8 @@ width: 1000px;
 
 .subscribe-section {
   position: relative;
-  width: 100%;
+  margin: 80px;
+  width: 1200px;
   height: 600px;
   background-image: url('/assets/Home.png');
   background-size: cover;
@@ -923,21 +1044,31 @@ width: 1000px;
   margin-bottom: 20px;
 }
 
-.subscribe-form {
+
+.subscribe-forms {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
+  margin-bottom: 10px;
+  flex-direction: column; 
+  gap: 10px; 
 }
+
 
 .email-input {
   padding: 10px;
   border: 1px solid #ccc;
+  background-color: transparent; 
   border-radius: 4px;
   margin-right: 10px;
-  width: 70%;
-  max-width: 300px;
+  width: 300px;
+  max-width: 500px; 
 }
 
+.email-input::placeholder {
+  color: white; 
+  opacity: 1; 
+}
 .subscribe-button {
   background-color: rgba(255, 255, 255, 0.9);
   color: #2e7d32;
@@ -965,18 +1096,18 @@ width: 1000px;
 
 .footer-logo h3 {
   font-size: 24px;
-  margin: 0;
+  margin-bottom: 130px;
 }
 
 .footer-links {
   display: flex;
-  gap: 40px;
+  gap: 100px;
 }
 
 .footer-column {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .footer-column a {
@@ -990,8 +1121,18 @@ width: 1000px;
 
 .footer-social {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 }
+
+.footer-social a {
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+  color: white; 
+  text-decoration: none; 
+}
+
 
 .footer-social img {
   width: 24px;
@@ -999,7 +1140,7 @@ width: 1000px;
 }
 
 .footer-subscribe {
-  width: 100%;
+  width: 400px;
   margin-top: 20px;
 }
 
@@ -1009,14 +1150,26 @@ width: 1000px;
 
 .subscribe-form {
   display: flex;
-  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;    
 }
 
 .subscribe-form input {
-  padding: 10px;
-  border: none;
-  border-radius: 4px 0 0 4px;
+  border: 1px solid white; 
+  background-color: transparent; 
+  padding: 10px;            
+  margin-right: 10px;
   width: 70%;
+  max-width: 300px;
+  color: white; 
+}
+.subscribe-form input::placeholder {
+  color: white; 
+  opacity: 1; 
+}
+
+.subscribe-form input:focus {
+  outline: none; 
 }
 
 .subscribe-form button {
@@ -1031,6 +1184,7 @@ width: 1000px;
 .privacy-text {
   font-size: 12px;
   color: #ccc;
+  margin-top: 10px;
 }
 
 /* responsive */
